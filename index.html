@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SURA </title>
     <script src="phonegap.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="assets/js/jquery.mobile-1.3.2.min.css" />
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="assets/js/jquery.mobile-1.3.2.min.js"></script>
     <script src="assets/js/codigo.js"></script>
     <script>
         $( document ).on( "pageinit", "#menu", function() {
@@ -51,7 +51,7 @@
             <a href="#video" data-role="button" data-corners="false"   style="color:green; background-color:red";>video</a> 
                 <ul>
                     <li class="menuUsuario"><label id="nameUsuario" ></label> </li>
-                    <li><img src="assets/img/menu/finanzas.png" width="95%" onClick="abrir('finanzas.html')"/></li>
+                    <li><a href="#videoOnline" data-role="button" data-corners="false"   style="color:blue; background-color:gray";>Video Online</a> </li>
                     <li><img src="assets/img/menu/productos.png"width="95%" onClick="abrir('productos.html')"/></li>
                     <li><img src="assets/img/menu/contactanos.png"width="95%" onClick="abrir('contacto.html')"/></li>
                     <li><img src="assets/img/menu/oficinas.png"width="95%"     onClick="abrir('oficinas.html')"/></li>
@@ -82,7 +82,7 @@
             <a href="#video" data-role="button" data-corners="false"   style="color:green; background-color:red";>video</a> 
                 <ul>
                     <li class="menuUsuario"><label id="nameUsuario" ></label> </li>
-                    <li><img src="assets/img/menu/finanzas.png" width="95%" onClick="abrir('finanzas.html')"/></li>
+                    <li><a href="#videoOnline" data-role="button" data-corners="false"   style="color:blue; background-color:gray";>Video Online</a></li>
                     <li><img src="assets/img/menu/productos.png"width="95%" onClick="abrir('productos.html')"/></li>
                     <li><img src="assets/img/menu/contactanos.png"width="95%" onClick="abrir('contacto.html')"/></li>
                     <li><img src="assets/img/menu/oficinas.png"width="95%"     onClick="abrir('oficinas.html')"/></li>
@@ -99,6 +99,37 @@
 
         </div><!-- /panel -->
     </div><!-- /page -->
-  
+
+
+  <div data-role="page" id="videoOnline">
+
+        <div data-role="content">    
+            <iframe width="420" height="345"
+            src="http://www.youtube.com/embed/XGSy3_Czz8k">
+            </iframe>
+        </div><!-- /content -->
+    
+        <div  data-role="panel" id="left-panel" data-display="overlay">
+            <h4><img src="assets/img/menu/iconosura.png" width="80%" onClick="abrir('index.html')"/></h4>
+            <a href="#video" data-role="button" data-corners="false"   style="color:green; background-color:red";>video</a> 
+                <ul>
+                    <li class="menuUsuario"><label id="nameUsuario" ></label> </li>
+                    <li><img src="assets/img/menu/finanzas.png" width="95%" onClick="abrir('finanzas.html')"/></li>
+                    <li><img src="assets/img/menu/productos.png"width="95%" onClick="abrir('productos.html')"/></li>
+                    <li><img src="assets/img/menu/contactanos.png"width="95%" onClick="abrir('contacto.html')"/></li>
+                    <li><img src="assets/img/menu/oficinas.png"width="95%"     onClick="abrir('oficinas.html')"/></li>
+                    <li><img src="assets/img/AccesoUsuario.png" width="30%" onClick="abrir('acceso.html')"/></li>
+                </ul>
+                <ul class="menuUsuario">
+                    <li><img src="assets/img/menu/productosSURA.png" width="95%" onClick="abrir('inicio.html')"/></li>
+                    <li><img src="assets/img/menu/fondosobjetivo.png" width="95%" onClick="abrir('fondoObjetivos.html')"/></li>
+                    <li><img src="assets/img/menu/fondoscontratos.png" width="95%" onClick="abrir('fondoContrato.html')"/></li>
+                    <li><img src="assets/img/menu/afore.png" width="95%" onClick="abrir('afore.html')"/></li>
+                    <li><img src="assets/img/AccesoUsuario.png"  width="30%" onClick="abrir('drag.html')"/></li>
+                </ul>
+
+
+        </div><!-- /panel -->
+    </div><!-- /page -->  
 </body>
 </html>
