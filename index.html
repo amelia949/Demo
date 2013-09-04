@@ -72,6 +72,16 @@
     <div data-role="page" id="video">
 
         <div data-role="content">    
+            <div class="tableDiv">
+                <div class="rowDiv">
+                    <div class="cellDiv30">
+                       <a href="#left-panel" ><img id="open-left" src="assets/img/icono-menu.png" width="20%"  /></a>
+                    </div>
+                    <div class="cellDiv70" align="right" >
+                        <img src="assets/img/icono-sura.png" width="30%" >
+                    </div>
+                </div>
+            </div>
             <video id="miVideo"  src="assets/video/myvideo.mp4" width="300px" height="234" > </video>
    
             <button onClick="reproducir()"> reproducir video </button>
@@ -103,9 +113,19 @@
 
   <div data-role="page" id="videoOnline">
 
-        <div data-role="content">    
+        <div data-role="content"> 
+            <div class="tableDiv">
+                <div class="rowDiv">
+                    <div class="cellDiv30">
+                       <a href="#left-panel" ><img id="open-left" src="assets/img/icono-menu.png" width="20%"  /></a>
+                    </div>
+                    <div class="cellDiv70" align="right" >
+                        <img src="assets/img/icono-sura.png" width="30%" >
+                    </div>
+                </div>
+            </div>   
             <iframe width="420" height="345"
-            src="http://www.youtube.com/embed/XGSy3_Czz8k">
+            src="http://www.youtube.com/embed/UlI0oD3BTTU">
             </iframe>
         </div><!-- /content -->
     
@@ -114,7 +134,7 @@
             <a href="#video" data-role="button" data-corners="false"   style="color:green; background-color:red";>video</a> 
                 <ul>
                     <li class="menuUsuario"><label id="nameUsuario" ></label> </li>
-                    <li><img src="assets/img/menu/finanzas.png" width="95%" onClick="abrir('finanzas.html')"/></li>
+                    <li><a href="#videoOnline" data-role="button" data-corners="false"   style="color:blue; background-color:gray";>Video Online</a></li>
                     <li><img src="assets/img/menu/productos.png"width="95%" onClick="abrir('productos.html')"/></li>
                     <li><img src="assets/img/menu/contactanos.png"width="95%" onClick="abrir('contacto.html')"/></li>
                     <li><img src="assets/img/menu/oficinas.png"width="95%"     onClick="abrir('oficinas.html')"/></li>
