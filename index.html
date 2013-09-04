@@ -26,6 +26,38 @@
             });
         });
 
+
+         $( document ).on( "pageinit", "#video", function() {
+            $( document ).on( "swipeleft swiperight", "#video", function( e ) {
+                // We check if there is no open panel on the page because otherwise
+                // a swipe to close the left panel would also open the right panel (and v.v.).
+                // We do this by checking the data that the framework stores on the page element (panel: open).
+                if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+                    if ( e.type === "swipeleft"  ) {
+                        $( "#right-panel" ).panel( "open" );
+                    } else if ( e.type === "swiperight" ) {
+                        $( "#video-panel" ).panel( "open" );
+                    }
+
+                }
+            });
+        });
+        $( document ).on( "pageinit", "#videoOnline", function() {
+            $( document ).on( "swipeleft swiperight", "#videoOnline", function( e ) {
+                // We check if there is no open panel on the page because otherwise
+                // a swipe to close the left panel would also open the right panel (and v.v.).
+                // We do this by checking the data that the framework stores on the page element (panel: open).
+                if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+                    if ( e.type === "swipeleft"  ) {
+                        $( "#right-panel" ).panel( "open" );
+                    } else if ( e.type === "swiperight" ) {
+                        $( "#videoOnline-panel" ).panel( "open" );
+                    }
+
+                }
+            });
+        });
+
     </script>
      <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -75,7 +107,7 @@
             <div class="tableDiv">
                 <div class="rowDiv">
                     <div class="cellDiv30">
-                       <a href="#left-panel" ><img id="open-left" src="assets/img/icono-menu.png" width="20%"  /></a>
+                       <a href="#video-panel" ><img id="open-left" src="assets/img/icono-menu.png" width="20%"  /></a>
                     </div>
                     <div class="cellDiv70" align="right" >
                         <img src="assets/img/icono-sura.png" width="30%" >
@@ -87,7 +119,7 @@
             <button onClick="reproducir()"> reproducir video </button>
         </div><!-- /content -->
     
-        <div  data-role="panel" id="left-panel" data-display="overlay">
+        <div  data-role="panel" id="video-panel" data-display="overlay">
             <h4><img src="assets/img/menu/iconosura.png" width="80%" onClick="abrir('index.html')"/></h4>
             <a href="#video" data-role="button" data-corners="false"   style="color:green; background-color:red";>video</a> 
                 <ul>
@@ -117,7 +149,7 @@
             <div class="tableDiv">
                 <div class="rowDiv">
                     <div class="cellDiv30">
-                       <a href="#left-panel" ><img id="open-left" src="assets/img/icono-menu.png" width="20%"  /></a>
+                       <a href="#videoOnline-panel" ><img id="open-left" src="assets/img/icono-menu.png" width="20%"  /></a>
                     </div>
                     <div class="cellDiv70" align="right" >
                         <img src="assets/img/icono-sura.png" width="30%" >
@@ -129,7 +161,7 @@
             </iframe>
         </div><!-- /content -->
     
-        <div  data-role="panel" id="left-panel" data-display="overlay">
+        <div  data-role="panel" id="videoOnline-panel" data-display="overlay">
             <h4><img src="assets/img/menu/iconosura.png" width="80%" onClick="abrir('index.html')"/></h4>
             <a href="#video" data-role="button" data-corners="false"   style="color:green; background-color:red";>video</a> 
                 <ul>
