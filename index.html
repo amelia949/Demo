@@ -63,14 +63,17 @@
 
         function DoIt() {
             alert("DoIt");
-            var surl = "http://172.16.0.76:8081/cineco/rest/pelicula/2?callback?";
+            var surl = "http://172.16.0.76:8081/cineco/rest/allPeliculas/1?callback?";
              $.ajax({
                 type: 'GET',
                 url: surl,
                 dataType: "json",
             contentType: "text/plain;charset=UTF-8",
                 success: function (val) {
-                    alert("Valor " + val.data.sinopsis);
+                    alert("Valor " +val);
+                    alert("titulo " + val.data[0].titulo);
+                    alert("sinopsis " + val.data[1].sinopsis);
+                    alert("tamaño " +val.data.size());
                 },
                 error: function (xhr, status, error) { alert('Error text !!' + error+"- " + status); }
             });
